@@ -21,5 +21,5 @@ jobs:
       - name: Upload static files (artifacts)
         uses: actions/upload-artifact@v4
         with:
-          name: static-files
+          name: static-site
           path: .next/
