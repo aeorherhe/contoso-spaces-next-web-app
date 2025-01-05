@@ -1,0 +1,19 @@
+name: Simple Next.js Continuous Integration
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build-project:
+    name: Build project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js 14.x
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build static files
+        run: npm run build
