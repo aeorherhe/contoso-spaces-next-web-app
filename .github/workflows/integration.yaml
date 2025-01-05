@@ -17,6 +17,8 @@ jobs:
         run: npm install
       - name: Build static files
         run: npm run build
+      - name: Check the build files
+        run: ls -l .next/
 
       - name: Upload static files (artifacts)
         uses: actions/upload-artifact@v3
