@@ -26,15 +26,3 @@ jobs:
           name: static-site
           include-hidden-files: true
           path: .next/
-  releast-project:
-    name: Release project
-    runs-on: ubuntu-latest
-    # This step will be executed only if the previous step is successful
-    needs: build-project # This is the name of the job that should be completed before this job starts
-    steps:
-      - name: Download static files (artifacts)
-        uses: actions/download-artifact@v4
-        with:
-          name: static-site
-      - name: Test artifact download
-        run: ls -R
