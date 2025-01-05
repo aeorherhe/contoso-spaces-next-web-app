@@ -21,7 +21,7 @@ jobs:
         run: ls -l .next/
 
       - name: Upload static files (artifacts)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: static-site
-          path: .next/
+          path: pages/locations/
