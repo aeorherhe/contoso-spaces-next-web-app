@@ -41,7 +41,7 @@ jobs:
       - name: Archive site content
         uses: thedoctor0/zip-release@0.7.5
         with:
-          filenames: site.zip
+          filename: site.zip
       - name: Create Github Release
         id: create_new_release
         uses: actions/create-release@v1
