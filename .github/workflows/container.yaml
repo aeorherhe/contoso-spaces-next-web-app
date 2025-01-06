@@ -23,4 +23,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nextwebapp:${{ github.run_number }}, ${{ secrets.DOCKER_HUB_USERNAME }}/nextwebapp:latest
+          tags:
+            ${{ secrets.DOCKER_HUB_USERNAME }}/nextwebapps:${{ github.run_number }},
+            ${{ secrets.DOCKER_HUB_USERNAME }}/nextwebapps:latest
